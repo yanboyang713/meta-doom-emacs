@@ -42,12 +42,12 @@
 ;; they are implemented.
 
 ;; This is to use pdf-tools instead of doc-viewer
-(use-package! pdf-tools
-  :config
-  (pdf-tools-install)
-  (setq-default pdf-view-display-size 'fit-width)
-  :custom
-  (pdf-annot-activate-created-annotations t "automatically annotate highlights"))
+;;(use-package! pdf-tools
+;;  :config
+;;  (pdf-tools-install)
+;;  (setq-default pdf-view-display-size 'fit-width)
+;;  :custom
+;;  (pdf-annot-activate-created-annotations t "automatically annotate highlights"))
 
 ;; For textklintrc
 (after! flycheck

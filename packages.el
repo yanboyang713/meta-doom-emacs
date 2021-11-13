@@ -65,3 +65,8 @@
 (unpin! org-roam company-org-roam)
 (package! acme-mode
   :recipe (:host github :repo "theyamo/acme-mode.el"))
+(package! helm-bibtex)
+(unpin! ox-hugo)
+(package! ox-hugo
+  :recipe (:host github :repo "kaushalmodi/ox-hugo"))
+(unpin! org-mode)
