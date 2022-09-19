@@ -7,9 +7,9 @@
   (setq org-default-notes-file "~/org/refile.org")
   (setq org-agenda-files (quote("~/org/"
                                 "~/org/synced/"
-                                "~/org/org-roam/"
-                                "~/org/org-roam/daily/"
-                                "~/org/org-roam/references/"
+                                "~/org/roam/"
+                                "~/org/roam/daily/"
+                                "~/org/roam/references/"
                                 )))
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
   (setq org-ellipsis " ▼ ")
@@ -116,7 +116,7 @@
   ;; org refile related stuff
   (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                    (org-agenda-files :maxlevel . 9)
-                                   ("~/org/org-roam/" :maxlevel . 9))))
+                                   ("~/org/roam/" :maxlevel . 9))))
 
   (setq org-refile-use-outline-path t)
 
@@ -211,10 +211,13 @@
       (format "%% Org-mode is exporting headings to %s levels.\n"
               depth)))
 
+  (after! org
+     (load-library "ox-reveal")
+     )
   ;; org-noter stuff
   (after! org-noter
     (setq
-     org-noter-notes-search-path "~/org/org-roam/references/"
+     org-noter-notes-search-path "~/org/roam/references/"
      org-noter-hide-other nil
      org-noter-separate-notes-from-heading t
      org-noter-always-create-frame nil)

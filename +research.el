@@ -17,7 +17,7 @@
   )
 ;; org-roam related things
 (after! org-roam
-  (setq org-roam-directory "~/org/org-roam/")
+  (setq org-roam-directory "~/org/roam/")
 
   (add-hook 'after-init-hook 'org-roam-mode)
 
@@ -71,7 +71,7 @@
 ;; For deft
 (after! deft
   (setq deft-extensions '("org")
-        deft-directory "~/org/org-roam/"
+        deft-directory "~/org/roam/"
         deft-recursive t
         deft-strip-summary-regexp ":PROPERTIES:\n\\(.+\n\\)+:END:\n"
         deft-use-filename-as-title t))

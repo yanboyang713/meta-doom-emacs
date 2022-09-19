@@ -70,3 +70,5 @@
 (package! ox-hugo
   :recipe (:host github :repo "kaushalmodi/ox-hugo"))
 (unpin! org-mode)
+(package! org-reveal)
+(package! ox-reveal)
