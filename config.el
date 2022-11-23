@@ -7,8 +7,9 @@
 ;; clients, file templates and snippets.
 ;;
 
-(load! "+org")
-(load! "+research")
+;;(load! "+org")
+;;(load! "+research")
+(load! "OrgResearch")
 (load! "+email")
 (load! "+misc")
 (load! "+bindings")
