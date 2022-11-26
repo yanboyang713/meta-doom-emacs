@@ -1,3 +1,12 @@
+#+title:Doom-emacs config
+#+PROPERTY: header-args :tangle config.el
+
+If you want to use this file for configuration, open it in Emacs and run
+~org-babel-tangle~, or ~C-c C-v t~ (you need to have org-mode and org-babel
+installed).
+
+* Basis Configure
+#+begin_src emacs-lisp :tangle yes
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
@@ -25,6 +34,10 @@
 ;; Theme
 (setq doom-theme 'doom-dracula)
 
+#+end_src
+
+** ASCII banner
+#+begin_src emacs-lisp :tangle yes
 (defun my-meta-scientific-banner ()
   (let* ((banner '(
 
@@ -48,7 +61,10 @@
      'face 'doom-dashboard-banner)))
 
 (setq +doom-dashboard-ascii-banner-fn #'my-meta-scientific-banner)
+#+end_src
 
+* Additional Functions/Macros
+#+begin_src emacs-lisp :tangle yes
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -73,13 +89,20 @@
 ;;  (setq-default pdf-view-display-size 'fit-width)
 ;;  :custom
 ;;  (pdf-annot-activate-created-annotations t "automatically annotate highlights"))
+#+end_src
 
+** flycheck
+#+begin_src emacs-lisp :tangle yes
 ;; For textklintrc
 (after! flycheck
   (setq flycheck-textlint-config "~/.config/textlint/textlintrc.json")
   (setq flycheck-textlint-executable "~/npm-workspace/node_modules/.bin/textlint")
   )
 
+#+end_src
+
+** Calendar
+#+begin_src emacs-lisp :tangle yes
 ;; For calendar support
 (defun my-open-calendar()
   (interactive)
@@ -106,3 +129,5 @@
 (map! :leader
       :desc "Org noter"
       "n p" #'org-noter)
+
+#+end_src
