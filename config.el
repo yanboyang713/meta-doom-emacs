@@ -20,7 +20,7 @@
 
 ;; Font settings
 (setq doom-font (font-spec :family "RobotoMono Nerd Font"  :size 18)
-     doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font Mono" :size 15))
+     doom-variable-pitch-font (font-spec :family "Fira Code" :size 15))
 
 ;; Theme
 (setq doom-theme 'doom-dracula)
@@ -34,7 +34,7 @@
 "┃┃┃┃┃┃┃┗━━┓━┏┛┗┓━┃┏━┓┃"
 "┗┛┗┛┗┛┗━━━┛━┗━━┛━┗┛━┗┛"
 "━━━━━━━━━━━━━━━━━━━━━━"
-"━━━━━━━━SCIENTIFIC━━━━━━━━"
+"━━━━━━SCIENTIFIC━━━━━━"
 "━━━━━━━━━━━━━━━━━━━━━━"
 ))
          (longest-line (apply #'max (mapcar #'length banner))))

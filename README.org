@@ -1,0 +1,54 @@
+* Pre-required
++ Set $XDG_CONFIG_HOME
+  #+begin_src bash
+paru -S meta-xdg
+  #+end_src
+
++ Set $DOOMDIR
+  /etc/profile.d/meta-emacs.sh
+
+  #+begin_src file
+#!/bin/sh
+source /etc/profile.d/xdg.sh
+
+echo ${XDG_CONFIG_HOME}
+
+if [[ -z "${XDG_CONFIG_HOME}" ]]; then
+export DOOMDIR="${HOME}/.config/doom/"
+else
+export DOOMDIR="${XDG_CONFIG_HOME}/meta-emacs"
+fi
+ #+end_src
+
+test:
+#+begin_src
+echo $DOOMDIR
+#+end_src
+
++ Install fonts
+
+* Install DOOM Emacs
+#+begin_src bash
+git clone --depth 1 https://github.com/doomemacs/doomemacs.git $(test -n "$XDG_CONFIG_HOME" && echo "$XDG_CONFIG_HOME/emacs" || echo "~/.emacs.d")
+#+end_src
+
+* Load Setting files
+#+begin_src bash
+gh repo clone yanboyang713/meta-emacs $(test -n "$XDG_CONFIG_HOME" && echo "$XDG_CONFIG_HOME/meta-emacs" || echo "~/.config/doom/")
+#+end_src
+
+* final install
+
+#+begin_src
+$(test -n "$XDG_CONFIG_HOME" && echo "$XDG_CONFIG_HOME/emacs" || echo "~/.emacs.d")/bin/doom install
+#+end_src
+
+* Upgrade
+#+begin_src bash
+$(test -n "$XDG_CONFIG_HOME" && echo "$XDG_CONFIG_HOME/emacs" || echo "~/.emacs.d")/bin/doom sync
+#+end_src
+
+* Test Meta-Emacs
+#+begin_src bash
+emacs --debug-init
+#+end_src
