@@ -1,3 +1,12 @@
+#+title: Doom Emacs Packages file Config
+#+PROPERTY: header-args :tangle packages.el
+
+If you want to use this file for configuration, open it in Emacs and run
+~org-babel-tangle~, or ~C-c C-v t~ (you need to have org-mode and org-babel
+installed).
+
+* Guidline
+#+begin_src emacs-lisp :tangle yes
 ;; -*- no-byte-compile: t; -*-
 ;;; $DOOMDIR/packages.el
 
@@ -49,7 +58,10 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 ;(package! org-ref :pin "2a91b6f67dc3116b0b688c1242ce67d90d833326")
+#+end_src
 
+* org mode required package
+#+begin_src emacs-lisp :tangle yes
 (package! websocket)
 (package! org-roam-ui
   :recipe (:host github :repo "org-roam/org-roam-ui" :files ("*.el" "out")))
@@ -90,9 +102,15 @@
   :recipe (:host github :repo "minad/org-modern"))
 (package! svg-tag-mode
   :recipe (:host github :repo "rougier/svg-tag-mode"))
+#+end_src
 
+* R language
+#+begin_src emacs-lisp :tangle yes
 (package! ess-view-data)
+#+end_src
 
+* Others
+#+begin_src emacs-lisp :tangle yes
 (package! key-chord
   :recipe (:host github :repo "emacsorphanage/key-chord"
            :files ("key-chord.el")))
@@ -184,3 +202,6 @@
 
 
 (package! nano-theme :recipe (:host github :repo "rougier/nano-theme"))
+
+
+#+end_src
