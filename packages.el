@@ -49,39 +49,21 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 ;(package! org-ref :pin "2a91b6f67dc3116b0b688c1242ce67d90d833326")
-(package! ess-view-data)
-(package! key-chord
-  :recipe (:host github :repo "emacsorphanage/key-chord"
-           :files ("key-chord.el")))
-(package! simple-httpd)
-(package! org-bullets)
 
+;; org mode required package
 (package! websocket)
 (package! org-roam-ui
   :recipe (:host github :repo "org-roam/org-roam-ui" :files ("*.el" "out")))
-
-(package! mu4e-alert)
 (package! org-roam-bibtex
  :recipe (:host github :repo "org-roam/org-roam-bibtex"))
 ;(unpin!;; When using org-roam via the `+roam` flag
 (unpin! org-roam company-org-roam)
-(package! evil-workman-mode
-  :recipe (
-           :host github
-           :repo "chrisbarrett/evil-workman-mode"
-           ))
-
 (package! org-roam :recipe (:host github :repo "org-roam/org-roam" ))
-
-
-(package! ivy-bibtex)
 (package! org-ref)
 ;;(package! org-roam-bibtex)
 (package! org-super-agenda)
 (package! org-gtd)
 (package! org-noter)
-
-(package! rainbow-mode)
 (package! org-transclusion :recipe (:host github :repo "/nobiot/org-transclusion"
                                     ;:build (:not compile)
                                     ))
@@ -92,6 +74,43 @@
 (package! org-appear :recipe (:host github :repo "awth13/org-appear"))
 (package! org-noter-pdftools)
 (package! org-pdftools)
+(package! org-ol-tree
+  :recipe (
+           :host github
+           :repo "Townk/org-ol-tree"
+           ))
+(package! org-sidebar)
+(unpin! ox-hugo)
+(package! ox-hugo
+  :recipe (:host github :repo "kaushalmodi/ox-hugo"))
+(unpin! org-mode)
+(package! org-reveal)
+(package! ox-reveal)
+(package! org-roam-timestamps :recipe (:host github :repo "ThomasFKJorna/org-roam-timestamps"))
+(package! org-modern
+  :recipe (:host github :repo "minad/org-modern"))
+(package! svg-tag-mode
+  :recipe (:host github :repo "rougier/svg-tag-mode"))
+
+;; R language
+(package! ess-view-data)
+(package! key-chord
+  :recipe (:host github :repo "emacsorphanage/key-chord"
+           :files ("key-chord.el")))
+(package! simple-httpd)
+;;(package! org-bullets)
+
+(package! mu4e-alert)
+(package! evil-workman-mode
+  :recipe (
+           :host github
+           :repo "chrisbarrett/evil-workman-mode"
+           ))
+
+
+
+(package! ivy-bibtex)
+(package! rainbow-mode)
 (package! olivetti)
 (package! binder)
 
@@ -105,13 +124,6 @@
 (package! tree-sitter)
 (package! tree-sitter-langs)
 
-(package! org-ol-tree
-  :recipe (
-           :host github
-           :repo "Townk/org-ol-tree"
-           ))
-(package! org-sidebar)
-
 ;(package! engrave-faces
  ; :recipe (:host github :repo "tecosaur/engrave-faces"))
 (package! mlscroll)
@@ -121,7 +133,6 @@
 
 (package! erefactor)
 
-(package! svg-tag-mode :recipe (:host github :repo "rougier/svg-tag-mode"))
 (package! mu4e-dashboard :recipe (:host github :repo "rougier/mu4e-dashboard"))
 (package! mu4e-thread-folding :recipe (:host github :repo "rougier/mu4e-thread-folding"))
 ;(package! org-agenda :recipe (:host github :repo "rougier/mu4e-thread-folding"))
@@ -163,13 +174,6 @@
 ;; When using bibtex-completion via the `biblio` module
 (unpin! bibtex-completion helm-bibtex ivy-bibtex)
 ;(package! helm-bibtex)
-(unpin! ox-hugo)
-(package! ox-hugo
-  :recipe (:host github :repo "kaushalmodi/ox-hugo"))
-(unpin! org-mode)
-(package! org-reveal)
-(package! ox-reveal)
-
 (package! devdocs)
 (package! prettier)
 
@@ -182,4 +186,3 @@
 
 (package! nano-theme :recipe (:host github :repo "rougier/nano-theme"))
 
-(package! org-roam-timestamps :recipe (:host github :repo "ThomasFKJorna/org-roam-timestamps"))
