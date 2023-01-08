@@ -18,11 +18,12 @@
 (setq user-full-name "Boyang Yan"
       user-mail-address "yanboyang713@gamil.com")
 
-;; Font settings
 (setq doom-font (font-spec :family "RobotoMono Nerd Font"  :size 18)
-     doom-variable-pitch-font (font-spec :family "Fira Code" :size 15))
+      doom-big-font (font-spec :family "RobotoMono Nerd Font" :size 30 :weight 'light)
+      doom-variable-pitch-font (font-spec :family "Fira Code" :size 15)
+      doom-unicode-font (font-spec :family "JuliaMono")
+      doom-serif-font (font-spec :family "RobotoMono Nerd Font" :weight 'light))
 
-;; Theme
 (setq doom-theme 'doom-dracula)
 
 (defun my-meta-scientific-banner ()
