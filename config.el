@@ -21,7 +21,7 @@
 (setq doom-font (font-spec :family "RobotoMono Nerd Font"  :size 18)
       doom-big-font (font-spec :family "RobotoMono Nerd Font" :size 30 :weight 'light)
       doom-variable-pitch-font (font-spec :family "Fira Code" :size 15)
-      doom-unicode-font (font-spec :family "JuliaMono")
+      doom-unicode-font (font-spec :family "JuliaMono" :size 15)
       doom-serif-font (font-spec :family "RobotoMono Nerd Font" :weight 'light))
 
 (setq doom-theme 'doom-dracula)
