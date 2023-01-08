@@ -17,7 +17,7 @@ Setting up the config to find the Org and Org Roam directories.
 =org-modern= is really cool -- especially when combined with =svg-tag-mode=.
 The only downside is it doesn't play well with =org-indent-mode= (for now).
 
-#+begin_src emacs-lisp :tangle no
+#+begin_src emacs-lisp :tangle yes
 (use-package! org-modern
   :hook (org-mode . org-modern-mode)
   :config
@@ -29,7 +29,7 @@ The only downside is it doesn't play well with =org-indent-mode= (for now).
    org-special-ctrl-a/e t
    org-insert-heading-respect-content t
    ;; Appearance
-   org-modern-radio-target    '("⁜ " t "")
+   ;;org-modern-radio-target    '("⁜ " t "")
    org-modern-internal-target '("↪ " t "")
    org-modern-todo nil
    org-modern-tag nil
@@ -39,8 +39,8 @@ The only downside is it doesn't play well with =org-indent-mode= (for now).
    org-modern-priority nil
    org-modern-horizontal-rule "──────────"
    org-modern-hide-stars "·"
-   org-modern-star ["⁖"]
-   org-modern-keyword "‣"
+   org-modern-star ["1" "2" "3" "4" "5" "6" "7" "8" "9"]
+   ;;org-modern-keyword "‣"
    org-modern-list '((43 . "•")
                      (45 . "–")
                      (42 . "∘")))

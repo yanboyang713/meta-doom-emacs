@@ -1,6 +1,40 @@
 (setq org-directory "~/org/"
       org-roam-directory "~/org/references/notes")
 
+(use-package! org-modern
+  :hook (org-mode . org-modern-mode)
+  :config
+  (setq
+   ;; Edit settings
+   org-auto-align-tags nil
+   org-tags-column 0
+   org-catch-invisible-edits 'show-and-error
+   org-special-ctrl-a/e t
+   org-insert-heading-respect-content t
+   ;; Appearance
+   ;;org-modern-radio-target    '("⁜ " t "")
+   org-modern-internal-target '("↪ " t "")
+   org-modern-todo nil
+   org-modern-tag nil
+   org-modern-timestamp t
+   org-modern-statistics nil
+   org-modern-progress nil
+   org-modern-priority nil
+   org-modern-horizontal-rule "──────────"
+   org-modern-hide-stars "·"
+   org-modern-star ["1" "2" "3" "4" "5" "6" "7" "8" "9"]
+   ;;org-modern-keyword "‣"
+   org-modern-list '((43 . "•")
+                     (45 . "–")
+                     (42 . "∘")))
+  (custom-set-faces!
+    `((org-modern-tag)
+      :background ,(doom-blend (doom-color 'blue) (doom-color 'bg) 0.1)
+      :foreground ,(doom-color 'grey))
+    `((org-modern-radio-target org-modern-internal-target)
+      :inherit 'default :foreground ,(doom-color 'blue)))
+  )
+
 (use-package! org-fragtog
   :after org
   :hook (org-mode . org-fragtog-mode)
