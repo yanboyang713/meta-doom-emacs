@@ -24,7 +24,7 @@
    org-modern-priority nil
    org-modern-horizontal-rule "──────────"
    org-modern-hide-stars "·"
-   org-modern-star ["1." "2." "3." "4." "5." "6." "7." "8." "9."]
+   org-modern-star '("◉" "○" "◈" "◇" "✳" "◆" "✸" "▶")
    org-modern-keyword
         '((t                     . t)
           ("title"               . "𝙏")
