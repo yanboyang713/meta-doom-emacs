@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 ;(package! org-ref :pin "2a91b6f67dc3116b0b688c1242ce67d90d833326")
-
+(package! org :pin "ca873f7")
 (package! websocket)
 (package! org-roam-ui
   :recipe (:host github :repo "org-roam/org-roam-ui" :files ("*.el" "out")))
@@ -82,7 +82,7 @@
 (unpin! ox-hugo)
 (package! ox-hugo
   :recipe (:host github :repo "kaushalmodi/ox-hugo"))
-(unpin! org-mode)
+;;(unpin! org-mode)
 (package! org-reveal)
 (package! ox-reveal)
 (package! org-roam-timestamps :recipe (:host github :repo "ThomasFKJorna/org-roam-timestamps"))

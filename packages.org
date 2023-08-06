@@ -62,6 +62,7 @@ installed).
 
 * org mode required package
 #+begin_src emacs-lisp :tangle yes
+(package! org :pin "ca873f7")
 (package! websocket)
 (package! org-roam-ui
   :recipe (:host github :repo "org-roam/org-roam-ui" :files ("*.el" "out")))
@@ -94,7 +95,6 @@ installed).
 (unpin! ox-hugo)
 (package! ox-hugo
   :recipe (:host github :repo "kaushalmodi/ox-hugo"))
-(unpin! org-mode)
 (package! org-reveal)
 (package! ox-reveal)
 (package! org-roam-timestamps :recipe (:host github :repo "ThomasFKJorna/org-roam-timestamps"))

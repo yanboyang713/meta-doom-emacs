@@ -469,3 +469,7 @@ See `org-capture-templates' for more information."
          entry
          (file+olp "~/blog/org-content/blog.org" "Posts")
          (function  org-hugo-new-subtree-post-capture-template))))
+
+(after! org
+  (load-library "ox-reveal")
+  (setq org-reveal-root "file:///path/to/reveal.js-master"))
